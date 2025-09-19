@@ -21,7 +21,7 @@ export function EnergySlider({ value, onChange, className = '' }: EnergySliderPr
   return (
     <div className={`space-y-4 ${className}`}>
       <div className="text-center">
-        <h3 className="text-lg font-semibold text-text-primary mb-2">
+        <h3 className="text-lg font-semibold text-white mb-2">
           How's your energy right now?
         </h3>
         <div 
@@ -86,7 +86,7 @@ export function EnergySlider({ value, onChange, className = '' }: EnergySliderPr
         </div>
 
         {/* Labels */}
-        <div className="flex justify-between mt-2 text-xs text-text-secondary">
+        <div className="flex justify-between mt-2 text-xs text-gray-400">
           <span>Drained</span>
           <span>Energized</span>
         </div>
