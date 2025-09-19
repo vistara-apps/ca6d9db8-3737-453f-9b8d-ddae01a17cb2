@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Energy Flow",
+    "subtitle": "Built with Zara",
+    "description": "Energy Flow is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://ca6d9db83737453f9b8dddae01a17cb2-uaz1.vercel.app",
+    "splashImageUrl": "https://ca6d9db83737453f9b8dddae01a17cb2-uaz1.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://ca6d9db83737453f9b8dddae01a17cb2-uaz1.vercel.app/image.png",
+    "tagline": "Energy Flow",
+    "screenshotUrls": [
+      "https://ca6d9db83737453f9b8dddae01a17cb2-uaz1.vercel.app/screenshot.png",
+      "https://ca6d9db83737453f9b8dddae01a17cb2-uaz1.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://ca6d9db83737453f9b8dddae01a17cb2-uaz1.vercel.app/api/webhook"
+  }
+}
