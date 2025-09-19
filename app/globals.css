@@ -3,10 +3,72 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-gray-600;
+  :root {
+    /* Design System Color Tokens */
+    --background: hsl(210, 40%, 10%);
+    --accent: hsl(35, 90%, 60%);
+    --primary: hsl(195, 70%, 50%);
+    --surface: hsl(210, 35%, 15%);
+    --text-primary: hsl(0, 0%, 95%);
+    --text-secondary: hsl(0, 0%, 70%);
+    --border: hsl(210, 30%, 25%);
+    --muted: hsl(210, 25%, 20%);
+    --muted-foreground: hsl(0, 0%, 60%);
+    --destructive: hsl(0, 70%, 50%);
+    --destructive-foreground: hsl(0, 0%, 95%);
+    --input: hsl(210, 30%, 25%);
+    --ring: hsl(195, 70%, 50%);
+    --radius: 16px;
+
+    /* Extended color palette */
+    --primary-50: hsl(195, 70%, 95%);
+    --primary-100: hsl(195, 70%, 90%);
+    --primary-200: hsl(195, 70%, 80%);
+    --primary-300: hsl(195, 70%, 70%);
+    --primary-400: hsl(195, 70%, 60%);
+    --primary-500: hsl(195, 70%, 50%);
+    --primary-600: hsl(195, 70%, 40%);
+    --primary-700: hsl(195, 70%, 30%);
+    --primary-800: hsl(195, 70%, 20%);
+    --primary-900: hsl(195, 70%, 10%);
+    --primary-950: hsl(195, 70%, 5%);
+
+    --accent-50: hsl(35, 90%, 95%);
+    --accent-100: hsl(35, 90%, 90%);
+    --accent-200: hsl(35, 90%, 80%);
+    --accent-300: hsl(35, 90%, 70%);
+    --accent-400: hsl(35, 90%, 60%);
+    --accent-500: hsl(35, 90%, 60%);
+    --accent-600: hsl(35, 90%, 50%);
+    --accent-700: hsl(35, 90%, 40%);
+    --accent-800: hsl(35, 90%, 30%);
+    --accent-900: hsl(35, 90%, 20%);
+    --accent-950: hsl(35, 90%, 10%);
+
+    --secondary-50: hsl(210, 40%, 95%);
+    --secondary-100: hsl(210, 40%, 90%);
+    --secondary-200: hsl(210, 40%, 80%);
+    --secondary-300: hsl(210, 40%, 70%);
+    --secondary-400: hsl(210, 40%, 60%);
+    --secondary-500: hsl(210, 40%, 50%);
+    --secondary-600: hsl(210, 40%, 40%);
+    --secondary-700: hsl(210, 40%, 30%);
+    --secondary-800: hsl(210, 40%, 20%);
+    --secondary-900: hsl(210, 40%, 10%);
+    --secondary-950: hsl(210, 40%, 5%);
+
+    /* Chart colors for progress visualization */
+    --chart-1: hsl(195, 70%, 50%);
+    --chart-2: hsl(35, 90%, 60%);
+    --chart-3: hsl(120, 60%, 50%);
+    --chart-4: hsl(280, 70%, 60%);
+    --chart-5: hsl(0, 70%, 50%);
   }
-  
+
+  * {
+    @apply border-border;
+  }
+
   body {
     @apply bg-background text-text-primary;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -17,14 +79,38 @@
   .gradient-card {
     background: linear-gradient(135deg, hsl(260, 60%, 40%) 0%, hsl(280, 70%, 50%) 100%);
   }
-  
+
   .energy-gradient {
-    background: linear-gradient(90deg, hsl(120, 60%, 50%) 0%, hsl(60, 80%, 50%) 50%, hsl(0, 70%, 50%) 100%);
+    background: linear-gradient(90deg,
+      hsl(0, 70%, 50%) 0%,
+      hsl(30, 70%, 50%) 25%,
+      hsl(60, 80%, 50%) 50%,
+      hsl(90, 60%, 50%) 75%,
+      hsl(120, 60%, 50%) 100%);
   }
-  
+
   .glass-effect {
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .energy-card {
+    @apply bg-surface rounded-lg border border-border p-4 shadow-card;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-250 ease-out transform hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-surface hover:bg-muted text-text-primary font-semibold py-3 px-6 rounded-lg border border-border transition-all duration-250 ease-out;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(195, 70%, 50%) 0%, hsl(35, 90%, 60%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
